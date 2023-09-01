@@ -1,0 +1,94 @@
+/* */
+header{
+    color: white;
+    background-color: black;
+    width: 24.733%;
+
+}
+header h1{
+    font-family: Comic Sans MS;
+    font-size: larger;
+    letter-spacing: 0.15cm;
+    border-bottom: solid 5pt red; /*dotted dashed double*/
+}
+li{
+    float:left;
+}
+li a{
+    display: block;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-right: solid 1px black;
+    font-variant: small-caps;
+}
+ul{
+    list-style-type: none;
+    margin: 0; /*väline vahe elementist внешнее расстояние от элементов*/
+    padding: 0; /*elemendi sisu ümber ruum расстояние текста от полей*/
+    overflow: hidden;
+    background-color: lightgray;
+    width: 24.733%;
+}
+li a:hover{
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+}
+/*обращаемся к конкретному классу pöördume ul nimega nimekiri*/
+.nimekiri{
+    list-style-type: circle;
+    margin: 0; /*väline vahe elementist внешнее расстояние от элементов*/
+    padding: 20px; /*elemendi sisu ümber ruum расстояние текста от полей*/
+    overflow: hidden;
+    background-color: lightgoldenrodyellow;
+}
+img#pilt1{
+    width:10%;
+}
+img#pilt2{
+    width:15%;
+    border: dotted 10pt red;
+}
+img#pilt3{
+    width:20%;
+    border: dotted 15pt blue;
+    border-radius: 180%;
+
+}
+
+section{
+    width: 24.733%;
+}
+
+section#sec1{
+    margin: 50px;
+    text-align: center;
+    background-color: lightsteelblue;
+    color: black;
+    border-radius: 90%;
+    border-top: solid 5px gray;
+    border-bottom: solid 5px black;
+}
+
+section#sec2{
+    font-size: 30px;
+    background-color: lightgray;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: groove 30px red;
+}
+
+section#sec3{
+    margin: 20px;
+    width: 50%;
+    background-color: lightgray;
+    border-bottom: double 10px blue;
+    border-top: ridge 15px yellow;
+    border-right: dashed 20px orange;
+    border-left: dotted 20px red;
+}
+
