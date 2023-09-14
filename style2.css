@@ -1,0 +1,117 @@
+/* */
+body, html{
+    background-image: linear-gradient(to bottom, black, white);
+}
+
+header{
+    color: white;
+    background-color: black;
+    text-align: center;
+
+}
+header h1{
+    font-family: Comic Sans MS;
+    font-size: 20pt;
+    letter-spacing: 0.15cm;
+    border-bottom: solid 5pt darkred; /*dotted dashed double*/
+    margin: 0;
+    -webkit-text-stroke: 1px black;
+}
+li{
+    width: 35%;
+}
+li a{
+    background-color: black;
+    color: white;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px;
+    border-right: solid 5pt darkred;
+    border-bottom: solid 5pt darkred;
+    font-variant: small-caps;
+    height: 250px;
+}
+ul{
+    color: white;
+    list-style-type: none;
+    margin: 0; /*väline vahe elementist внешнее расстояние от элементов*/
+    padding: 0; /*elemendi sisu ümber ruum расстояние текста от полей*/
+    overflow: hidden;
+    width: 20%;
+}
+
+/*обращаемся к конкретному классу pöördume ul nimega nimekiri*/
+.nimekiri{
+    list-style-type: circle;
+    margin: 0; /*väline vahe elementist внешнее расстояние от элементов*/
+    padding: 20px; /*elemendi sisu ümber ruum расстояние текста от полей*/
+    overflow: hidden;
+    background-color: lightgoldenrodyellow;
+}
+img#pilt1{
+    width:10%;
+}
+img#pilt2{
+    width:15%;
+    border: dotted 10pt red;
+}
+img#pilt3{
+    width:20%;
+    border: dotted 15pt blue;
+    border-radius: 180%;
+
+}
+
+section{
+    width: 24.733%;
+
+}
+
+section#sec1{
+    font-size: 15pt;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    margin: 50px;
+    padding: 80px;
+    text-align: center;
+    background-color: lightgray;
+    color: black;
+    border-radius: 90%;
+    border-top: solid 5px gray;
+    border-bottom: solid 5px black;
+    height: 100pt;
+}
+
+section#sec2{
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    font-size: 30px;
+    background-color: lightgray;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: groove 30px black;
+}
+
+section#sec3{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    margin: 20px;
+    width: 50%;
+    background-color: lightgray;
+    border-bottom: double 10px black;
+    border-top: ridge 15px black;
+    border-right: dashed 20px black;
+    border-left: dotted 20px black;
+}
+
+footer{
+    position: absolute;
+    left: 8%;
+    top: 940pt;
+}

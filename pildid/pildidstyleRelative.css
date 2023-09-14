@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: Book Antiqua ;
+    font-size: 16px;
+}
+
+h2{
+    color: black;
+}
+header{
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 30px;
+}
+
+main{
+    background-color: gray;
+    padding: 50px;
+    height: 600px;
+}
+
+.esimene, .teine, .kolmas{
+    position: relative;
+
+}
+
+.esimene{
+    top: 15%;
+    left: 0px;
+    z-index: 1;
+}
+
+.teine{
+    top: -50px;
+    left: 60px;
+    z-index: 3;
+}
+
+.kolmas{
+    top: -400px;
+    left: 100px;
+    z-index: 2;
+}
+
+img{
+    border: 3px solid black;
+}
