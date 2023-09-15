@@ -1,0 +1,44 @@
+body,html{
+    background-color: grey;
+}
+h1 {
+
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 10pt;
+    font-family: Arial;
+    font-size: larger;
+    letter-spacing: 0.15cm;
+    height: 30pt;
+}
+
+img#pilt {
+    position: absolute;
+    top: 70pt;
+}
+
+h2#tekst{
+
+    position: absolute;
+    top: 60pt;
+    left: 250pt;
+    color: white;
+
+}
+
+div#tekst2{
+    position: absolute;
+    top: 100pt;
+    left: 250pt;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: groove 10px black;
+}
+
+
