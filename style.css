@@ -2,7 +2,7 @@
 header{
     color: white;
     background-color: black;
-    width: 24.733%;
+    width: 26%;
 
 }
 header h1{
@@ -30,7 +30,7 @@ ul{
     padding: 0; /*elemendi sisu ümber ruum расстояние текста от полей*/
     overflow: hidden;
     background-color: lightgray;
-    width: 24.733%;
+    width: 26%;
 }
 li a:hover{
     background-color: white;
