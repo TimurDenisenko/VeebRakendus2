@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Spordi ankeet</h1>
+<h2>Võistkonda registreerimine</h2>
 <form name="ankeet">
   <!--tekstikast-->
   <table border="1">
@@ -70,7 +71,7 @@
     </tr>
     <tr>
       <td>
-        <strong>Sinu sünnipäev</strong>
+        <strong>Millises vanuses alustasid treenimist?</strong>
       </td>
       <td>
         <input type="date" name="sunnipaev" id="sunnipaev">
@@ -78,18 +79,18 @@
     </tr>
     <tr>
       <td>
-        <strong>Sinu email</strong>
+        <label for="color"><strong>mis värvi T-särki sa tahad?</strong></label>
       </td>
       <td>
-        <input type="email" name="email" id="email">
+        <input type="color" name="color" id="color">
       </td>
     </tr>
     <tr>
       <td>
-        <strong> <label for="tel"> Sinu tel</label></strong>
+        <strong> <label for="time">Mis kell tavaliselt treenite?</label></strong>
       </td>
       <td>
-        <input type="tel" name="tel" id="tel">
+        <input type="time" name="time" id="time">
       </td>
     </tr>
     <tr>
@@ -99,6 +100,16 @@
       <td>
         <input type="file" name="file" id="file">
       </td>
+    </tr>
+    <tr>
+      <td><strong><label for="comment">Lisamärkused</label></strong></td>
+      <td>
+      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td><strong><label for="podgotovka">Teie ettevalmistustase</label></strong></td>
+      <td><input type="range" name="podgotovka" id="podgotovka"></td>
     </tr>
     <tr>
       <td>
