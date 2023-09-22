@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Spordi ankeet</title>
+</head>
+<body>
+<h1>Spordi ankeet</h1>
+<form name="ankeet">
+  <!--tekstikast-->
+  <table border="1">
+    <tr>
+      <td><label for="nimi">Nimi:</label></td>
+      <td><input type="text" name="nimi" id="nimi" placeholder="nimi"></td>
+    </tr>
+    <!--radionupp-->
+    <tr>
+    <td><strong>Rühm</strong></td>
+    <td>
+    <input type="radio" name="ryhm" id="tarpv21">
+    <label for="tarpv21">TARpv21</label>
+      <br>
+    <input type="radio" name="ryhm" id="tarpv22" checked>
+    <label for="tarpv22">TARpv22</label>
+      <br>
+    <input type="radio" name="ryhm" id="tarpv23">
+    <label for="tarpv23">TARpv23</label>
+      <br>
+    <input type="radio" name="ryhm" id="logitpv21">
+    <label for="logitpv21">LOGITpv21</label>
+    </td>
+    </tr>
+    <!--ripploend-->
+    <tr>
+      <td>
+    <label for="elu"><strong>Kus sa elad?</strong></label>
+      </td>
+      <td>
+    <select name="elukoht" id="elu">
+      <option>Vali...</option>
+      <option>Tallinn</option>
+      <option>Valga</option>
+      <option>Tartu</option>
+      <option>Narva</option>
+      <option>Pärnu</option>
+    </select>
+      </td>
+    </tr>
+    <!--märkeruut-->
+    <tr>
+      <td>
+    <strong>Vali oma spordialad</strong>
+      </td>
+    <td>
+    <input type="checkbox" name="ujumine" id="ujumine">
+    <label for="ujumine">Ujumine</label>
+    <br>
+    <input type="checkbox" name="jousaal" id="jousaal">
+    <label for="jousaal">Jõusaal</label>
+    <br>
+    <input type="checkbox" name="kasipall" id="kasipall">
+    <label for="kasipall">Kasipall</label>
+    <br>
+    <input type="checkbox" name="jooks" id="jooks">
+    <label for="jooks">Jooks</label>
+    <br>
+    <input type="checkbox" name="vorkpall" id="vorkpall">
+    <label for="vorkpall">Võrkpall</label>
+    </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Sinu sünnipäev</strong>
+      </td>
+      <td>
+        <input type="date" name="sunnipaev" id="sunnipaev">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Sinu email</strong>
+      </td>
+      <td>
+        <input type="email" name="email" id="email">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong> <label for="tel"> Sinu tel</label></strong>
+      </td>
+      <td>
+        <input type="tel" name="tel" id="tel">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong> <label for="file">Pass photo</label> </strong>
+      </td>
+      <td>
+        <input type="file" name="file" id="file">
+      </td>
+    </tr>
+    <tr>
+      <td>
+    <input type="button" value="OK">
+      </td>
+      <td>
+        <input type="reset" value="Reset">
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>
