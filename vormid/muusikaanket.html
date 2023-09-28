@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika anket</title>
+    <link rel="stylesheet" type="text/css" href="formcss.css">
+</head>
+<body>
+<h1>Muusika anket</h1>
+    <table>
+        <tr>
+            <td><label for="nimi">Nimi:</label></td>
+            <td><input type="text" name="nimi" id="nimi" placeholder="nimi"></td>
+        </tr>
+        <tr>
+            <td><strong>Rühm</strong></td>
+            <td>
+                <input type="radio" name="ryhm" id="tarpv21">
+                <label for="tarpv21">TARpv21</label>
+                <br>
+                <input type="radio" name="ryhm" id="tarpv22" checked>
+                <label for="tarpv22">TARpv22</label>
+                <br>
+                <input type="radio" name="ryhm" id="tarpv23">
+                <label for="tarpv23">TARpv23</label>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Millist muusika sa kuulad enam?</strong></td>
+            <td>
+            <input type="checkbox" name="rokk" id="rokk">
+            <label for="rokk">Rokk</label>
+            <br>
+            <input type="checkbox" name=popk" id="pop">
+            <label for="pop">Pop</label>
+            <br>
+            <input type="checkbox" name="rahvas" id="rahvas">
+            <label for="rahvas">Rahvas</label>
+            <br>
+            <input type="checkbox" name="chanson" id="chanson">
+            <label for="chanson">Chanson</label>
+            <br>
+            <input type="checkbox" name="elektrooniline muusika" id="elektrooniline muusika">
+            <label for="elektrooniline muusika">Elektrooniline muusika</label>
+            <br>
+           <input type="checkbox" name="klassikaline" id="klassikaline">
+            <label for="klassikaline">Klassikaline</label>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Mida sa arvad muusika kuulamiselt koolis?</strong></td>
+            <td>
+                <input type="radio" name="muusikakoolis" id="keelata">
+                <label for="keelata">See tuleks keelata</label>
+                <br>
+                <input type="radio" name="muusikakoolis" id="vaheajal">
+                <label for="vaheajal">Saate kuulata ainult vaheajal</label>
+                <br>
+                <input type="radio" name="muusikakoolis" id="alati">
+                <label for="alati">Saate alati kuulata</label>
+                <br>
+                <input type="radio" name="muusikakoolis" id="koolile">
+                <label for="koolile">Lülitage see vaheajal kogu koolile sisse</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tund"><strong>Mitu tundi päevas sa kuulad muusikat?</strong></label>
+            </td>
+            <td>
+                <select name="tund" id="tund">
+                    <option>Vali...</option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Kas saate ka muusikat kuulata telefonist?</strong></td>
+            <td>
+                <input type="radio" name="telefon" id="jah" checked>
+                <label for="jah">Jah</label>
+                <br>
+                <input type="radio" name="telefon" id="ei">
+                <label for="ei">Ei</label>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Kas sa kuulad raadiot?</strong></td>
+            <td>
+                <input type="checkbox" name="raadio" id="laua">
+                <label for="laua">Kuulan lauaraadio</label>
+                <br>
+                <input type="checkbox" name="raadio" id="telefon">
+                <label for="telefon">Kuulan telefon</label>
+                <br>
+                <input type="checkbox" name="raadio" id="mitte">
+                <label for="mitte">Ei kuula</label>
+            </td>
+        </tr>
+        <tr>
+            <td><strong><label for="raadiojaam">Millised raadiojaame oskate nimetada?</label></strong></td>
+            <td>
+                <textarea name="raadiojaam" id="raadiojaam"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Kes muusikuid/ansambleid sa tead?</strong></td>
+            <td>
+                <input type="checkbox" name="muusikuid" id="Linkin park">
+                <label for="Linkin park">Linkin park</label>
+                <br>
+                <input type="checkbox" name="muusikuid" id="Imagine dragons">
+                <label for="Imagine dragons">Imagine dragons</label>
+                <br>
+                <input type="checkbox" name="muusikuid" id="Starset">
+                <label for="Starset">Starset</label>
+                <br>
+                <input type="checkbox" name="muusikuid" id="Fall out boy">
+                <label for="Fall out boy">Fall out boys</label>
+                <br>
+                <input type="checkbox" name="muusikuid" id="Kino">
+                <label for="Kino">Kino</label>
+            </td>
+        </tr>
+        <tr>
+            <td><strong><label for="varv">Millise värviga seostad sa rokki?</label></strong></td>
+            <td><input type="color" name="varv" id="varv"></td>
+        </tr>
+        <tr>
+            <td><strong><label for="time">Milline on teie jaoks optimaalne aeg muusikat kuulata?</label></strong></td>
+            <td>
+                <input type="time" name="time" id="time">
+            </td>
+        </tr>
+        <tr>
+            <td><strong><label for="meeleolu">Kui palju mõjutab muusika teie meeleolu?</label></strong></td>
+            <td><input type="range" name="meeleolu" id="meeleolu"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="OK">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
