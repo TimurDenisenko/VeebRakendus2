@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Spordi ankeet</title>
     <link rel="stylesheet" type="text/css" href="formcss.css">
+  <script src="SportVormScript.js"></script>
 </head>
 <body>
 <h1>Spordi ankeet</h1>
@@ -13,23 +14,28 @@
   <table>
     <tr>
       <td><label for="nimi">Nimi:</label></td>
-      <td><input type="text" name="nimi" id="nimi" placeholder="nimi"></td>
+      <td><input type="text" name="nimi" id="nimi" placeholder="nimi" oninput="tervist()">
+        <div id="vastus"></div>
+      </td>
+
     </tr>
     <!--radionupp-->
     <tr>
     <td><strong>Rühm</strong></td>
     <td>
-    <input type="radio" name="ryhm" id="tarpv21">
+    <input type="radio" name="ryhm" id="tarpv21" value="tarpv21" onclick="radioValik()">
     <label for="tarpv21">TARpv21</label>
       <br>
-    <input type="radio" name="ryhm" id="tarpv22" checked>
+    <input type="radio" name="ryhm" id="tarpv22" value="tarpv22" onclick="radioValik()">
     <label for="tarpv22">TARpv22</label>
       <br>
-    <input type="radio" name="ryhm" id="tarpv23">
+    <input type="radio" name="ryhm" id="tarpv23" value="tarpv23" onclick="radioValik()">
     <label for="tarpv23">TARpv23</label>
       <br>
-    <input type="radio" name="ryhm" id="logitpv21">
+    <input type="radio" name="ryhm" id="logitpv21" value="logitpv21" onclick="radioValik()">
     <label for="logitpv21">LOGITpv21</label>
+      <div id="vastus2"></div><img src="" id="pilt">
+
     </td>
     </tr>
     <!--ripploend-->
@@ -54,20 +60,21 @@
     <strong>Vali oma spordialad</strong>
       </td>
     <td>
-    <input type="checkbox" name="ujumine" id="ujumine">
+    <input type="checkbox" name="ujumine" id="ujumine" value="ujumine" onchange="checkboxValik()">
     <label for="ujumine">Ujumine</label>
     <br>
-    <input type="checkbox" name="jousaal" id="jousaal">
+    <input type="checkbox" name="jousaal" id="jousaal" value="jousaal" onchange="checkboxValik()">
     <label for="jousaal">Jõusaal</label>
     <br>
-    <input type="checkbox" name="kasipall" id="kasipall">
+    <input type="checkbox" name="kasipall" id="kasipall" value="kasipall" onchange="checkboxValik()">
     <label for="kasipall">Kasipall</label>
     <br>
-    <input type="checkbox" name="jooks" id="jooks">
+    <input type="checkbox" name="jooks" id="jooks" value="jooks" onchange="checkboxValik()">
     <label for="jooks">Jooks</label>
     <br>
-    <input type="checkbox" name="vorkpall" id="vorkpall">
+    <input type="checkbox" name="vorkpall" id="vorkpall" value="vorkpall" onchange="checkboxValik()">
     <label for="vorkpall">Võrkpall</label>
+      <div id="vastus3"></div>
     </td>
     </tr>
     <tr>
@@ -114,7 +121,8 @@
     </tr>
     <tr>
       <td>
-    <input type="button" value="OK">
+    <input type="button" value="OK" onclick="koikkokku()">
+        <div id="vastus4"></div>
       </td>
       <td>
         <input type="reset" value="Reset">
