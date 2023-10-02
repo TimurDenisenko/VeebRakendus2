@@ -5,6 +5,7 @@ function tervist()
     let name = document.getElementById("nimi");
     let answer = document.getElementById("vastus");
     answer.innerHTML="Tere päevast, "+ name.value;
+    return answer.innerHTML;
 }
 
 function radioValik()
@@ -15,7 +16,7 @@ function radioValik()
     let tarpv23 = document.getElementById("tarpv23");
     let logitpv21 = document.getElementById("logitpv21");
     let ryhm = null;
-    let pilt = document.getElementById("pilt"   )
+    let pilt = document.getElementById("pilt")
     if (tarpv21.checked)
     {
         ryhm = tarpv21.value;
@@ -42,6 +43,8 @@ function radioValik()
 
     }
     answer2.innerHTML = "sa oled "+ryhm;
+
+    return answer2.innerHTML;
 }
 
 function checkboxValik()
@@ -75,65 +78,35 @@ function checkboxValik()
         sport+=vorkpall.value;
     }
     answer3.innerHTML = "sinu spordialad on: "+sport;
+
+    return answer3.innerHTML;
+}
+
+function selectOptionValik(event)
+{
+    let answer5= document.getElementById("vastus5");
+    if (event.target.value==="Tallinn")
+    { answer5.innerHTML = "Sinu linn on "+event.target.value}
+}
+
+function selectOptionValik2()
+{
+    let answer5= document.getElementById("vastus5");
+    let elu = document.getElementById("elu");
+    let tekst = "";
+    let podgotovka=document.getElementById("podgotovka");
+    let varv = document.getElementById("color");
+    if (elu.selectedIndex!==0) {
+        tekst+="Sinu linn on "+ elu.value + " ja Sinu ettevalmistus on "+podgotovka.value +"/10";
+    }
+    else { answer5.innerHTML = "Palun vali elukoht";}
+    answer5.innerHTML=tekst;
+    answer5.style.color = varv.value;
 }
 
 function koikkokku()
 {
     let answer4 = document.getElementById("vastus4");
-    let name = document.getElementById("nimi");
-    let kokku = "";
-    let tarpv21 = document.getElementById("tarpv21");
-    let tarpv22 = document.getElementById("tarpv22");
-    let tarpv23 = document.getElementById("tarpv23");
-    let logitpv21 = document.getElementById("logitpv21");
-    kokku+="Sinu nimi on "+name.value+". "
-    kokku+="Sinu grupp on "
-    if (tarpv21.checked)
-    {
-        kokku += tarpv21.value;
-    }
-    else if (tarpv22.checked)
-    {
-        kokku += tarpv22.value;
-    }
-    else if (tarpv23.checked)
-    {
-        kokku += tarpv23.value;
-    }
-    else if (logitpv21.checked)
-    {
-        kokku += logitpv21.value;
-    }
-    kokku+="."
-    let ujumine = document.getElementById("ujumine");
-    let jousaal = document.getElementById("jousaal");
-    let kasipall = document.getElementById("kasipall");
-    let jooks = document.getElementById("jooks");
-    let vorkpall = document.getElementById("vorkpall");
-    kokku+=" Sinu spordialad: "
-    var sport = "";
-    if (ujumine.checked)
-    {
-        sport+=ujumine.value+", ";
-    }
-    if (jousaal.checked)
-    {
-        sport+=jousaal.value+", ";
-    }
-    if (kasipall.checked)
-    {
-        sport+=kasipall.value+", ";
-    }
-    if (jooks.checked)
-    {
-        sport+=jooks.value+", ";
-    }
-    if (vorkpall.checked)
-    {
-        sport+=vorkpall.value;
-    }
-    kokku+=sport;
-    kokku+=".";
-    answer4.innerHTML = kokku;
+    answer4.innerHTML = tervist()+". "+radioValik()+". "+checkboxValik()+"."
 }
 

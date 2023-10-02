@@ -4,151 +4,162 @@
     <meta charset="UTF-8">
     <title>Muusika anket</title>
     <link rel="stylesheet" type="text/css" href="formcss.css">
+    <script src="MuusikaVormScript.js"></script>
 </head>
 <body>
 <h1>Muusika anket</h1>
     <table>
         <tr>
             <td><label for="nimi">Nimi:</label></td>
-            <td><input type="text" name="nimi" id="nimi" placeholder="nimi"></td>
+            <td><input type="text" name="nimi" id="nimi" placeholder="nimi" oninput="tere()"></td>
+            <td><div id="vastus1"></div></td>
         </tr>
         <tr>
             <td><strong>Rühm</strong></td>
             <td>
-                <input type="radio" name="ryhm" id="tarpv21">
+                <input type="radio" name="ryhm" id="tarpv21" value="TARpv21" onclick="grupp()">
                 <label for="tarpv21">TARpv21</label>
                 <br>
-                <input type="radio" name="ryhm" id="tarpv22" checked>
+                <input type="radio" name="ryhm" id="tarpv22" value="TARpv22" onclick="grupp()">
                 <label for="tarpv22">TARpv22</label>
                 <br>
-                <input type="radio" name="ryhm" id="tarpv23">
+                <input type="radio" name="ryhm" id="tarpv23" value="TARpv23" onclick="grupp()">
                 <label for="tarpv23">TARpv23</label>
             </td>
+            <td><div id="vastus2"></div></td>
         </tr>
         <tr>
             <td><strong>Millist muusika sa kuulad enam?</strong></td>
             <td>
-            <input type="checkbox" name="rokk" id="rokk">
+            <input type="checkbox" name="rokk" id="rokk" value="rokk" onchange="zanr()">
             <label for="rokk">Rokk</label>
             <br>
-            <input type="checkbox" name=popk" id="pop">
+            <input type="checkbox" name=popk" id="pop" value="pop" onchange="zanr()">
             <label for="pop">Pop</label>
             <br>
-            <input type="checkbox" name="rahvas" id="rahvas">
+            <input type="checkbox" name="rahvas" id="rahvas" value="rahvas" onchange="zanr()">
             <label for="rahvas">Rahvas</label>
             <br>
-            <input type="checkbox" name="chanson" id="chanson">
+            <input type="checkbox" name="chanson" id="chanson" value="chanson" onchange="zanr()">
             <label for="chanson">Chanson</label>
             <br>
-            <input type="checkbox" name="elektrooniline muusika" id="elektrooniline muusika">
-            <label for="elektrooniline muusika">Elektrooniline muusika</label>
+            <input type="checkbox" name="elektrooniline muusika" id="elektrooniline" value="elektrooniline muusika" onchange="zanr()">
+            <label for="elektrooniline">Elektrooniline muusika</label>
             <br>
-           <input type="checkbox" name="klassikaline" id="klassikaline">
+           <input type="checkbox" name="klassikaline" id="klassikaline" value="klassikaline" onchange="zanr()">
             <label for="klassikaline">Klassikaline</label>
             </td>
+            <td><div id="vastus3"></div></td>
         </tr>
         <tr>
             <td><strong>Mida sa arvad muusika kuulamiselt koolis?</strong></td>
             <td>
-                <input type="radio" name="muusikakoolis" id="keelata">
+                <input type="radio" name="muusikakoolis" id="keelata" onclick="koolimuusika()">
                 <label for="keelata">See tuleks keelata</label>
                 <br>
-                <input type="radio" name="muusikakoolis" id="vaheajal">
+                <input type="radio" name="muusikakoolis" id="vaheajal" onclick="koolimuusika()">
                 <label for="vaheajal">Saate kuulata ainult vaheajal</label>
                 <br>
-                <input type="radio" name="muusikakoolis" id="alati">
+                <input type="radio" name="muusikakoolis" id="alati" onclick="koolimuusika()">
                 <label for="alati">Saate alati kuulata</label>
                 <br>
-                <input type="radio" name="muusikakoolis" id="koolile">
+                <input type="radio" name="muusikakoolis" id="koolile" onclick="koolimuusika()">
                 <label for="koolile">Lülitage see vaheajal kogu koolile sisse</label>
             </td>
+            <td><div><img src="" id="img"></div></td>
         </tr>
         <tr>
             <td>
                 <label for="tund"><strong>Mitu tundi päevas sa kuulad muusikat?</strong></label>
             </td>
             <td>
-                <select name="tund" id="tund">
+                <select name="tund" id="tund" onchange="keel()">
                     <option>Vali...</option>
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
                 </select>
             </td>
+            <td><div id="vastus4"></div></td>
         </tr>
         <tr>
             <td><strong>Kas saate ka muusikat kuulata telefonist?</strong></td>
             <td>
-                <input type="radio" name="telefon" id="jah" checked>
+                <input type="radio" name="telefon" id="jah" onclick="tel()">
                 <label for="jah">Jah</label>
                 <br>
-                <input type="radio" name="telefon" id="ei">
+                <input type="radio" name="telefon" id="ei" onchange="tel()">
                 <label for="ei">Ei</label>
             </td>
+            <td><div><img src="" id="img1"></div></td>
         </tr>
         <tr>
             <td><strong>Kas sa kuulad raadiot?</strong></td>
             <td>
-                <input type="checkbox" name="raadio" id="laua">
+                <input type="checkbox" name="raadio" id="laua" onclick="raadio()">
                 <label for="laua">Kuulan lauaraadio</label>
                 <br>
-                <input type="checkbox" name="raadio" id="telefon">
+                <input type="checkbox" name="raadio" id="telefon" onclick="raadio()">
                 <label for="telefon">Kuulan telefon</label>
                 <br>
-                <input type="checkbox" name="raadio" id="mitte">
+                <input type="checkbox" name="raadio" id="mitte" onclick="raadio()">
                 <label for="mitte">Ei kuula</label>
             </td>
+            <td><div id="vastus5"></div></td>
         </tr>
         <tr>
             <td><strong><label for="raadiojaam">Millised raadiojaame oskate nimetada?</label></strong></td>
             <td>
-                <textarea name="raadiojaam" id="raadiojaam"></textarea>
+                <textarea name="raadiojaam" id="raadiojaam" oninput="raadiojaam()"></textarea>
             </td>
+            <td><div id="vastus6"></div></td>
         </tr>
         <tr>
             <td><strong>Kes muusikuid/ansambleid sa tead?</strong></td>
             <td>
-                <input type="checkbox" name="muusikuid" id="Linkin park">
-                <label for="Linkin park">Linkin park</label>
+                <input type="checkbox" name="muusikuid" id="linkin" value="Linkin Park" onclick="muusikuid()">
+                <label for="linkin">Linkin park</label>
                 <br>
-                <input type="checkbox" name="muusikuid" id="Imagine dragons">
-                <label for="Imagine dragons">Imagine dragons</label>
+                <input type="checkbox" name="muusikuid" id="imagine" value="Imagine Dragons" onclick="muusikuid()">
+                <label for="imagine">Imagine dragons</label>
                 <br>
-                <input type="checkbox" name="muusikuid" id="Starset">
-                <label for="Starset">Starset</label>
+                <input type="checkbox" name="muusikuid" id="starset" value="Starset" onclick="muusikuid()">
+                <label for="starset">Starset</label>
                 <br>
-                <input type="checkbox" name="muusikuid" id="Fall out boy">
-                <label for="Fall out boy">Fall out boys</label>
+                <input type="checkbox" name="muusikuid" id="fall" value="Fall out boys" onclick="muusikuid()">
+                <label for="fall">Fall out boys</label>
                 <br>
-                <input type="checkbox" name="muusikuid" id="Kino">
-                <label for="Kino">Kino</label>
+                <input type="checkbox" name="muusikuid" id="kino" value="Kino" onclick="muusikuid()">
+                <label for="kino">Kino</label>
             </td>
+            <td><div id="vastus7"></div></td>
         </tr>
         <tr>
             <td><strong><label for="varv">Millise värviga seostad sa rokki?</label></strong></td>
-            <td><input type="color" name="varv" id="varv"></td>
+            <td><input type="color" name="varv" id="varv" onchange="varv()"></td>
+            <td><div id="vastus8"></div></td>
         </tr>
         <tr>
             <td><strong><label for="time">Milline on teie jaoks optimaalne aeg muusikat kuulata?</label></strong></td>

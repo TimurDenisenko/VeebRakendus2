@@ -17,6 +17,7 @@
       <td><input type="text" name="nimi" id="nimi" placeholder="nimi" oninput="tervist()">
         <div id="vastus"></div>
       </td>
+      <td></td>
 
     </tr>
     <!--radionupp-->
@@ -44,13 +45,13 @@
     <label for="elu"><strong>Kus sa elad?</strong></label>
       </td>
       <td>
-    <select name="elukoht" id="elu">
-      <option>Vali...</option>
-      <option>Tallinn</option>
-      <option>Valga</option>
-      <option>Tartu</option>
-      <option>Narva</option>
-      <option>Pärnu</option>
+    <select name="elukoht" id="elu" onchange="selectOptionValik2()">
+      <option >Vali...</option>
+      <option value="Tallinn">Tallinn</option>
+      <option value="Valga">Valga</option>
+      <option value="Tartu">Tartu</option>
+      <option value="Narva">Narva</option>
+      <option value="Parnu">Pärnu</option>
     </select>
       </td>
     </tr>
@@ -90,7 +91,7 @@
         <label for="color"><strong>mis värvi T-särki sa tahad?</strong></label>
       </td>
       <td>
-        <input type="color" name="color" id="color">
+        <input type="color" name="color" id="color" onchange="selectOptionValik2()">
       </td>
     </tr>
     <tr>
@@ -117,7 +118,9 @@
     </tr>
     <tr>
       <td><strong><label for="podgotovka">Teie ettevalmistustase</label></strong></td>
-      <td><input type="range" name="podgotovka" id="podgotovka"></td>
+      <td><input type="range" min="0" max="10" name="podgotovka" id="podgotovka" onchange="selectOptionValik2()">
+        <div id="vastus5"></div>
+      </td>
     </tr>
     <tr>
       <td>
