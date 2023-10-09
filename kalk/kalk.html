@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saiaa kalkulaator</title>
+  <script src="saiaScript.js"></script>
+  <link rel="stylesheet" href="saiaCss.css">
+</head>
+<body>
+<h1>Saia kalkulaator</h1>
+<form name="kalk">
+  <table>
+    <tr>
+      <td>
+        <label for="saiatyyp">Millist saia? (juustu - 1&euro;, magus - 2&euro;, pontsik - 1.5&euro;)</label>
+        <br>
+        <input type="text" name="saiatyyp" id="saiatyyp" oninput="inputTextValue()">
+      </td>
+      <td>
+          <label for="saiatyyp2">Vali saia tüüp:</label>
+        <br>
+        <select name="saiatyyp2" id="saiatyyp2" onchange="selectOptionChange()">
+          <option value="">Vali...</option>
+          <option value="juustu">Juustu sai</option>
+          <option value="magus">Magus sai</option>
+          <option value="pontsik">Pontsik</option>
+        </select>
+      </td>
+      <td>
+        <strong>Tee oma valik:</strong>
+        <br>
+        <input type="radio" name="saiatyyp3" id="juustu" value="juustu" onclick="radioChangse(event)">
+        <label for="juustu">Juustu sai</label>
+        <br>
+        <input type="radio" name="saiatyyp3" id="magus" value="magus" onclick="radioChange(event)">
+        <label for="magus">Magus sai</label>
+        <br>
+        <input type="radio" name="saiatyyp3" id="pontsik" value="pontsik" onclick="radioChange(event)">
+        <label for="pontsik">Pontsik</label>
+      </td>
+      <td>
+        <strong>Tee oma valik:</strong>
+        <br>
+        <input type="checkbox" name="juustu" id="juustu" value="juustu">
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="kogus">Mitu saia sina soovid?</label>
+        <br>
+        <input type="number" name="kogus" id="kogus" min="1" max="10" step="1">
+      </td>
+    </tr>
+      <tr>
+        <td>
+          <input type="button" value="OK" onclick="inputTextValue()">
+          <div id="vastus">Hind on </div>
+        </td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>
