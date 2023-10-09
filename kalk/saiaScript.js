@@ -10,12 +10,8 @@ function calculate(val, saia)
 //kontrollib et kogus väli ei ole tühi
 function validateForm()
 {
-    if (document.forms["kalk"]["kogus"].value == "") {
+    if (document.forms["kalk"]["kogus"].value == 0) {
         alert("Palun sisesta kogus! ");
-        return false;
-    }
-    if (document.forms["kalk"]["saiatyyp"].value == "" && document.forms["kalk"]["saiatyyp2"].selectedIndex == 0 && document.forms["kalk"]["saiatyyp3"].value == "") {
-        alert("Palun sisesta saia! ");
         return false;
     }
 }
@@ -26,6 +22,7 @@ function inputTextValue()
 {
     tyhistaRadio()
     tyhistaSelectOption()
+    tyhistaCheckbox()
     validateForm();
     let answer = document.getElementById("vastus");
     let kogus = document.getElementById("kogus").value;
@@ -80,6 +77,7 @@ function selectOptionChange()
 {
     tyhistaRadio()
     tyhistaTekstValue();
+    tyhistaCheckbox()
     validateForm();
     let answer = document.getElementById("vastus");
     let kogus = document.getElementById("kogus").value;
@@ -106,6 +104,7 @@ function radioChange(event)
 {
     tyhistaTekstValue();
     tyhistaSelectOption();
+    tyhistaCheckbox()
     validateForm();
 
     let answer = document.getElementById("vastus");
@@ -134,20 +133,27 @@ function checkboxChange(event)
     tyhistaTekstValue();
     tyhistaSelectOption();
     tyhistaRadio();
-    validateForm();
 
     let answer = document.getElementById("vastus");
     let kogus = document.getElementById("kogus").value;
-    let saiatyyp = event.target.id;
-    if (saiatyyp=="juustu")
+    let juustu = document.getElementById("juustu1").checked
+    let magus = document.getElementById("magus1").checked
+    let pontsik = document.getElementById("pontsik1").checked
+
+    validateForm();
+    if (juustu && magus || juustu && pontsik || magus && pontsik || juustu && magus && pontsik)
+    {
+        answer.innerHTML = "Palun vali 1 saia tüüp";
+    }
+    else if (juustu)
     {
         answer.innerHTML = "Hind on "+calculate(kogus, juustuhind) + "&euro;";
     }
-    else if (saiatyyp=="magus")
+    else if (magus)
     {
         answer.innerHTML = "Hind on "+calculate(kogus, magushind) + "&euro;";
     }
-    else if (saiatyyp=="pontsik")
+    else if (pontsik)
     {
         answer.innerHTML = "Hind on "+calculate(kogus, pontsikhind) + "&euro;";
     }

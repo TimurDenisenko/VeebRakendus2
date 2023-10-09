@@ -14,7 +14,9 @@
       <td>
         <label for="saiatyyp">Millist saia? (juustu - 1&euro;, magus - 2&euro;, pontsik - 1.5&euro;)</label>
         <br>
-        <input type="text" name="saiatyyp" id="saiatyyp" oninput="inputTextValue()">
+        <input type="text" name="saiatyyp" id="saiatyyp">
+        <br>
+        <input type="button" value="OK" onclick="inputTextValue()">
       </td>
       <td>
           <label for="saiatyyp2">Vali saia tüüp:</label>
@@ -29,7 +31,7 @@
       <td>
         <strong>Tee oma valik:</strong>
         <br>
-        <input type="radio" name="saiatyyp3" id="juustu" value="juustu" onclick="radioChangse(event)">
+        <input type="radio" name="saiatyyp3" id="juustu" value="juustu" onclick="radioChange(event)">
         <label for="juustu">Juustu sai</label>
         <br>
         <input type="radio" name="saiatyyp3" id="magus" value="magus" onclick="radioChange(event)">
@@ -41,8 +43,14 @@
       <td>
         <strong>Tee oma valik:</strong>
         <br>
-        <input type="checkbox" name="juustu" id="juustu" value="juustu">
-
+        <input type="checkbox" name="saiatyyp4" id="juustu1" value="juustu" onclick="checkboxChange(event)">
+        <label for="juustu">Juustu sai</label>
+        <br>
+        <input type="checkbox" name="saiatyyp4" id="magus1" value="magus" onclick="checkboxChange(event)">
+        <label for="magus">Magus sai</label>
+        <br>
+        <input type="checkbox" name="saiatyyp4" id="pontsik1" value="pontsik" onclick="checkboxChange(event)">
+        <label for="pontsik">Pontsik sai</label>
       </td>
     </tr>
     <tr>
@@ -52,12 +60,11 @@
         <input type="number" name="kogus" id="kogus" min="1" max="10" step="1">
       </td>
     </tr>
-      <tr>
-        <td>
-          <input type="button" value="OK" onclick="inputTextValue()">
-          <div id="vastus">Hind on </div>
-        </td>
-      </tr>
+    <tr>
+      <td>
+        <div id="vastus">Hind on </div>
+      </td>
+    </tr>
   </table>
 </form>
 </body>
