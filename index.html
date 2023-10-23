@@ -5,8 +5,77 @@
     <meta charset="UTF-8">
     <title>Timur veebirakenduste leht</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#sec1").click(function () {
+                $("#sec2").slideDown("slow");
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#sec2").click(function () {
+                $("#sec2").slideUp("slow");
+            });
+        });
+
+        function algus(){
+            $("footer").draggable();
+            $("footer").bind("drag", liigutus);
+        }
+
+        $(document).ready(function () {
+            $("#sec1").mouseenter(function () {$("#sec1").css("background-color","yellow").css("border-top","solid 5px orange").css("border-bottom","solid 5px darkorange")});
+            $("#sec1").mouseleave(function () {$("#sec1").css("background-color","lightsteelblue").css("border-top","solid 5px gray").css("border-bottom","solid 5px black")});
+        });
+
+        $(document).ready(function () {
+            $("#pilt1").mouseenter(function () {$('#pilt1').animate({width:'20%'}, 500)});
+            $("#pilt1").mouseenter(function () {$('#pilt2').animate({width:'15%'}, 500)});
+            $("#pilt1").mouseenter(function () {$('#pilt3').animate({width:'10%'}, 500)});
+        });
+
+        $(document).ready(function () {
+            $("#pilt2").mouseenter(function () {$('#pilt1').animate({width:'10%'}, 500)});
+            $("#pilt2").mouseenter(function () {$('#pilt2').animate({width:'20%'}, 500)});
+            $("#pilt2").mouseenter(function () {$('#pilt3').animate({width:'15%'}, 500)});
+        });
+
+        $(document).ready(function () {
+            $("#pilt3").mouseenter(function () {$('#pilt1').animate({width:'10%'}, 500)});
+            $("#pilt3").mouseenter(function () {$('#pilt2').animate({width:'15%'}, 500)});
+            $("#pilt3").mouseenter(function () {$('#pilt3').animate({width:'20%'}, 500)});
+        });
+
+        $(document).ready(function () {
+            $("#sec3").click(function(){
+                $('#sec3').animate({margin:'300px'}, 5000)
+            });
+            $("#sec3").mouseleave(function(){
+                $("#sec3").stop();
+                $('#sec3').animate({margin:'20px'}, 500)
+            });
+        });
+
+        $(document).ready(function () {
+            $("#abi").mouseenter(function () {
+                $("#abi").fadeOut();
+                $("#abi").fadeOut("slow");
+                $("#abi").fadeOut(3000);}
+            );
+            $("#abi").mouseleave(function () {
+                $("#abi").fadeIn();
+                $("#abi").fadeIn("slow");
+                $("#abi").fadeIn(3000);}
+            );
+        });
+
+    </script>
 </head> <!-- закрывающий тег-->
-<body>
+<body onload="algus()">
 <!--шапка päis-->
 <header>
     <h1><!-- заголовок-->
@@ -24,12 +93,22 @@
 
 <!-- сновная часть lehe sisu-->
 <main>
+    <div id="abi">
+        Abi <br>
+        1. Kui hõljutate kursorit esimese teabega elemendi kohal, muutub selle tagavärv kollaseks ja äärised oranžiks <br>
+        2. Kui klõpsate esimesel teabega elemendil, ilmub piltidega element <br>
+        3. Kui klõpsate teisel piltidega elemendil, suletakse piltidega element <br>
+        4. Kui hõljutate kursorit piltide kohal, muutub nende suurus <br>
+        5. Kui klõpsate 3. elemendil ja kursor on sellel, hakkab see liikuma paremasse alumisse nurka ja ka initsiaalid, aga kui kursor on väljaspool kolmanda elemendi piirkonda, siis see ja initsiaalid naasevad <br>
+        6. initsiaale saab liigutada <br>
+        7. Kui hõljutate kursorit selle elemendi kohal, kus on tekst abi kohta, hakkab see vilkuma <br>
+    </div>
     <section id="sec1">
         <h2>Info</h2>
-        <p>Ma õpin TTHKs, minu hobby on matkamine</p>
+        <p id="info">Ma õpin TTHKs, minu hobby on matkamine</p>
     </section>
     <section id="sec2">
-        <h2>Pildid</h2>
+        <h2 id="pildh2">Pildid</h2>
         <p>
             <img src="pilt.png" alt="ilus pilt" id="pilt1">
             <img src="pilt.png" alt="ilus pilt" id="pilt2">

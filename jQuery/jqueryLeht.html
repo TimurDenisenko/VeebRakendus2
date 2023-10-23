@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Veeb</title>
+    <link rel="stylesheet" type="text/css" href="jqueryStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function kollane()
+        {
+            $("div#tekst").css("color","yellow");
+        }
+        function must()
+        {
+            $("div#tekst").css("color","black");
+        }
+        function hiireTegevus()
+        {
+            $("div#tekst").mouseenter(kollane);
+            $("div#tekst").mouseleave(must);
+        }
+        function peida()
+        {
+            $("#nupp1").click(function(){
+                $("#tekst").fadeIn();
+                $("#tekst").fadeIn("fast");
+                $("#tekst").fadeIn(3000);
+            });
+        }
+        function naita()
+        {
+            $("#nupp2").click(function(){
+                $("#tekst").fadeOut();
+                $("#tekst").fadeOut("fast");
+                $("#tekst").fadeOut(3000);
+            });
+        }
+        function teade()
+        {
+            alert("Kohe näitan teksti!")
+        }
+    </script>
+</head>
+<body onload="hiireTegevus()">
+<h1>JQuery CDN</h1>
+<h2>Mis see on?</h2>
+<input type="button" value="Paremale" onclick="$('div#tekst').animate({left:'500px'}, 2000)">
+<input type="button" value="Vasakule" onclick="$('div#tekst').animate({left:'20px'}, 1000)">
+<br>
+<input type="button" value="Peida" onclick="$('div#tekst').hide(2000, teade())">
+<input type="button" value="Näita" onclick="$('div#tekst').show(2000)">
+<br>
+<input type="button" value="FadeIn" id="nupp1" onclick="peida()">
+<input type="button" value="FadeOut" id="nupp2" onclick="naita()">
+
+<div id="tekst">JavaScript programmeerimiskeele raamatukogu, veebiarenduse tööriistade komplekt.
+    Selle abiga pääseb arendaja juurde Interneti-lehe erinevatele elementidele ja haldab selle sisu.
+    Nii saate muuta lehte olenevalt kasutaja seadetest ja toimingutest.</div>
+</body>
